@@ -186,7 +186,7 @@ function FleeIcon({ channel, index }: { channel: typeof channels[number]; index:
 
 export function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden pb-16 pt-28 sm:pt-40 lg:min-h-screen lg:pb-24">
+    <section className="relative isolate overflow-x-hidden pb-16 pt-28 sm:pt-40 lg:min-h-screen lg:pb-24">
       <div aria-hidden className="surface-grid absolute inset-0 opacity-50" />
       <div aria-hidden className="orb -right-28 top-20 size-[460px] bg-primary/25" />
       <div aria-hidden className="orb left-10 top-32 size-[260px] bg-fuchsia-500/16" />
@@ -199,34 +199,37 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10 text-center lg:text-left"
+          className="relative z-10 w-full min-w-0 text-center lg:text-left"
         >
-          <div className="mb-6 inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary-soft shadow-glow sm:px-4 sm:py-2 sm:text-sm">
+          <div className="mb-5 inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-[11px] font-semibold text-primary-soft shadow-glow sm:px-4 sm:py-2 sm:text-sm">
             Open Source • Self Hosted • Developer First
           </div>
-          <h1 className="font-display text-[2.6rem] font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+          <h1
+            className="font-display font-bold text-white sm:text-6xl lg:text-7xl"
+            style={{ fontSize: "clamp(1.9rem, 9vw, 3.75rem)", lineHeight: 1.08 }}
+          >
             Send Notifications.
             <br />
             Any Channel.
             <span className="pink-text-gradient animate-shimmer"> One API.</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-sm text-base leading-7 text-white/68 sm:max-w-none sm:mt-7 sm:text-xl lg:mx-0">
+          <p className="mx-auto mt-5 w-full max-w-[34ch] text-[0.95rem] leading-7 text-white/68 sm:max-w-none sm:mt-7 sm:text-xl lg:mx-0">
             Production-grade notification infrastructure with retries, tracking, DLQs, webhooks,
             metrics, and reliability built in.
           </p>
 
-          {/* Buttons — side by side on mobile too, full row */}
-          <div className="mt-7 grid grid-cols-2 gap-3 sm:mt-9 sm:flex sm:flex-row">
-            <Button size="lg" asChild>
-              <a href="#docs" className="justify-center">
+          {/* Buttons */}
+          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
+            <Button size="lg" className="w-full sm:w-auto" asChild>
+              <a href="#docs">
                 Get Started
                 <ArrowRight className="size-4 shrink-0" />
               </a>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
-              <a href="https://github.com/siddharttth/naughyfication" target="_blank" rel="noopener noreferrer" className="justify-center">
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto" asChild>
+              <a href="https://github.com/siddharttth/naughyfication" target="_blank" rel="noopener noreferrer">
                 <Github className="size-4 shrink-0" />
-                GitHub
+                View GitHub
               </a>
             </Button>
           </div>

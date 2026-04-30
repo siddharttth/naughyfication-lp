@@ -28,10 +28,10 @@ export function Navbar() {
       transition={{ duration: 0.55, ease: "easeOut" }}
       className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-background/55 backdrop-blur-2xl"
     >
-      <nav className="container-shell flex h-20 items-center justify-between">
-        <a href="#" className="group flex items-center gap-2.5 font-display text-lg font-bold text-white">
-          <Image src="/logo.png" alt="Naughyfication" width={44} height={44} className="size-11 drop-shadow-[0_0_10px_rgba(255,62,191,0.8)]" />
-          Naughyfication
+      <nav className="container-shell flex h-16 items-center justify-between sm:h-20">
+        <a href="#" className="group flex min-w-0 items-center gap-2 font-display text-base font-bold text-white sm:gap-2.5 sm:text-lg">
+          <Image src="/logo.png" alt="Naughyfication" width={36} height={36} className="size-9 shrink-0 drop-shadow-[0_0_10px_rgba(255,62,191,0.8)] sm:size-11" />
+          <span className="truncate">Naughyfication</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -58,15 +58,16 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <Button variant="secondary" size="sm" asChild>
-            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="Star on GitHub">
-              <Star className="size-3.5 fill-white" />
-              <span className="hidden xs:inline">Star</span>
-              <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-xs text-white/70">
-                {stars === null ? "…" : stars}
-              </span>
-            </a>
-          </Button>
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Star on GitHub"
+            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.06] px-2.5 py-1.5 text-xs font-medium text-white/80"
+          >
+            <Star className="size-3.5 fill-white/80" />
+            <span className="font-mono">{stars === null ? "…" : stars}</span>
+          </a>
           <button
             type="button"
             aria-label="Toggle navigation"
