@@ -1,6 +1,7 @@
 import { ArchitectureSection } from "@/components/architecture-section";
 import { CodeExampleSection } from "@/components/code-example-section";
 import { CtaSection } from "@/components/cta-section";
+import { DeveloperLetter } from "@/components/developer-letter";
 import { FeatureStrip } from "@/components/feature-strip";
 import { FeaturesSection } from "@/components/features-section";
 import { Footer } from "@/components/footer";
@@ -21,6 +22,7 @@ export default function Home() {
       <CodeExampleSection />
       <ArchitectureSection />
       <CtaSection />
+      <DeveloperLetter />
       <Footer />
     </main>
   );

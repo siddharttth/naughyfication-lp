@@ -78,6 +78,7 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${geistMono.variable} bg-background font-sans text-foreground antialiased`}
+        suppressHydrationWarning
       >
         {children}
       </body>
