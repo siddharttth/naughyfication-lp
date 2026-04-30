@@ -13,7 +13,7 @@ export function Footer() {
       <div className="container-shell flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
           <a href="#" className="flex items-center gap-2.5 font-display text-lg font-bold text-white">
-            <Image src="/logo.png" alt="Naughyfication" width={36} height={36} className="size-9 drop-shadow-[0_0_8px_rgba(255,62,191,0.6)]" />
+            <Image src="/logo.png" alt="Naughyfication" width={44} height={44} className="size-11 drop-shadow-[0_0_10px_rgba(255,62,191,0.7)]" />
             Naughyfication
           </a>
           <p className="mt-4 text-sm text-white/52">Built for developers who care about reliability.</p>

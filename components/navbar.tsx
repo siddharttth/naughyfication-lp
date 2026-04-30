@@ -30,9 +30,7 @@ export function Navbar() {
     >
       <nav className="container-shell flex h-20 items-center justify-between">
         <a href="#" className="group flex items-center gap-2.5 font-display text-lg font-bold text-white">
-          <span className="relative grid size-9 place-items-center">
-            <Image src="/logo.png" alt="Naughyfication" width={36} height={36} className="size-9 drop-shadow-[0_0_8px_rgba(255,62,191,0.7)]" />
-          </span>
+          <Image src="/logo.png" alt="Naughyfication" width={44} height={44} className="size-11 drop-shadow-[0_0_10px_rgba(255,62,191,0.8)]" />
           Naughyfication
         </a>
 
