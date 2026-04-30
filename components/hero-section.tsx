@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 function GmailIcon() {
   return (
-    <svg viewBox="0 0 48 48" className="size-10">
+    <svg viewBox="0 0 48 48" className="size-7 sm:size-10">
       <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"/>
       <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"/>
       <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/>
@@ -24,7 +24,7 @@ function GmailIcon() {
 
 function WhatsAppIcon() {
   return (
-    <svg viewBox="0 0 48 48" className="size-12">
+    <svg viewBox="0 0 48 48" className="size-8 sm:size-12">
       <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"/>
       <path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.308-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.918,43.798,4.893,43.803,4.868,43.803z"/>
       <path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,4.5c-10.989,0-19.932,8.942-19.937,19.932c-0.001,3.385,0.862,6.685,2.506,9.607l-2.732,9.974c-0.089,0.325,0.199,0.626,0.526,0.547l10.229-2.683c2.802,1.488,5.942,2.303,9.16,2.304h0.008c10.988,0,19.932-8.942,19.936-19.932c0.002-5.328-2.073-10.335-5.838-14.101C34.351,6.574,29.342,4.502,24.014,4.5L24.014,4.5z"/>
@@ -36,7 +36,7 @@ function WhatsAppIcon() {
 
 function TelegramIcon() {
   return (
-    <svg viewBox="0 0 48 48" className="size-12">
+    <svg viewBox="0 0 48 48" className="size-8 sm:size-12">
       <path fill="#29b6f6" d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z"/>
       <path fill="#fff" d="M34.11,14.114l-3.172,16.592c0,0-0.445,1.113-1.668,0.557l-7.497-5.832l-3.164-1.543l-5.497-1.836c0,0-0.841-0.297-0.926-0.928c-0.085-0.631,0.952-0.964,0.952-0.964l20.386-7.979C33.527,12.181,34.11,12.632,34.11,14.114z"/>
       <path fill="#b0bec5" d="M22.9,30.799l-2.913,2.908c0,0-0.121,0.091-0.254,0.043l0.555-4.985L22.9,30.799z"/>
@@ -47,7 +47,7 @@ function TelegramIcon() {
 
 function SlackIcon() {
   return (
-    <svg viewBox="0 0 127 127" className="size-10">
+    <svg viewBox="0 0 127 127" className="size-7 sm:size-10">
       <path d="M27.2 80c0 7.3-5.9 13.2-13.2 13.2C6.7 93.2.8 87.3.8 80c0-7.3 5.9-13.2 13.2-13.2h13.2V80z" fill="#E01E5A"/>
       <path d="M33.9 80c0-7.3 5.9-13.2 13.2-13.2 7.3 0 13.2 5.9 13.2 13.2v33c0 7.3-5.9 13.2-13.2 13.2-7.3 0-13.2-5.9-13.2-13.2V80z" fill="#E01E5A"/>
       <path d="M47.1 27.2c-7.3 0-13.2-5.9-13.2-13.2C33.9 6.7 39.8.8 47.1.8c7.3 0 13.2 5.9 13.2 13.2v13.2H47.1z" fill="#36C5F0"/>
@@ -62,7 +62,7 @@ function SlackIcon() {
 
 function IMessageIcon() {
   return (
-    <svg viewBox="0 0 48 48" className="size-12">
+    <svg viewBox="0 0 48 48" className="size-8 sm:size-12">
       <linearGradient id="iMessageGrad" x1="24" y1="4" x2="24" y2="44" gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#4cd964"/>
         <stop offset="1" stopColor="#28b345"/>
@@ -129,7 +129,7 @@ function FleeIcon({ channel, index }: { channel: typeof channels[number]; index:
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`absolute ${channel.className} hidden size-[72px] cursor-pointer place-items-center rounded-full sm:grid`}
+      className={`absolute ${channel.className} grid size-[52px] cursor-pointer place-items-center rounded-full sm:size-[72px]`}
       style={{
         x,
         y,
@@ -150,40 +150,40 @@ function FleeIcon({ channel, index }: { channel: typeof channels[number]; index:
 
 export function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden pb-20 pt-32 sm:pt-40 lg:min-h-screen lg:pb-24">
+    <section className="relative isolate overflow-hidden pb-16 pt-28 sm:pt-40 lg:min-h-screen lg:pb-24">
       <div aria-hidden className="surface-grid absolute inset-0 opacity-50" />
       <div aria-hidden className="orb -right-28 top-20 size-[460px] bg-primary/25" />
       <div aria-hidden className="orb left-10 top-32 size-[260px] bg-fuchsia-500/16" />
       <div aria-hidden className="absolute right-0 top-0 h-[680px] w-[55vw] bg-[radial-gradient(circle_at_60%_28%,rgba(255,62,191,0.24),transparent_34%),radial-gradient(circle_at_70%_50%,rgba(127,70,255,0.14),transparent_38%)]" />
 
-      <div className="container-shell grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="container-shell grid items-center gap-10 lg:gap-14 lg:grid-cols-[0.95fr_1.05fr]">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10"
+          className="relative z-10 text-center sm:text-left"
         >
-          <div className="mb-8 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary-soft shadow-glow">
+          <div className="mb-6 inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary-soft shadow-glow sm:mb-8 sm:px-4 sm:py-2 sm:text-sm">
             Open Source • Self Hosted • Developer First
           </div>
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-4xl font-bold leading-[1.0] text-white sm:text-6xl lg:text-7xl">
             Send Notifications.
             <br />
             Any Channel.
             <span className="pink-text-gradient animate-shimmer"> One API.</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68 sm:text-xl">
+          <p className="mt-5 text-base leading-7 text-white/68 sm:mt-7 sm:text-xl">
             Production-grade notification infrastructure with retries, tracking, DLQs, webhooks,
             metrics, and reliability built in.
           </p>
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Button size="lg" asChild>
+          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
+            <Button size="lg" className="w-full sm:w-auto" asChild>
               <a href="#docs">
                 Get Started
                 <ArrowRight className="size-5" />
               </a>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto" asChild>
               <a href="https://github.com/siddharttth/naughyfication" target="_blank" rel="noopener noreferrer">
                 <Github className="size-5" />
                 View GitHub
@@ -191,11 +191,11 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="mt-10 grid gap-4 text-sm text-white/60 sm:grid-cols-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-white/60 sm:justify-start sm:mt-10 sm:grid sm:grid-cols-3 sm:gap-4">
             {["Easy to Self-Host", "No Vendor Lock-in", "Developer Friendly"].map((item) => (
-              <div key={item} className="flex items-center gap-3">
-                <span className="grid size-8 place-items-center rounded-full bg-white/[0.06] text-primary-soft ring-1 ring-white/10">
-                  <Zap className="size-4" />
+              <div key={item} className="flex items-center gap-2">
+                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-white/[0.06] text-primary-soft ring-1 ring-white/10 sm:size-8">
+                  <Zap className="size-3.5 sm:size-4" />
                 </span>
                 {item}
               </div>
@@ -207,7 +207,7 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.96, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-2xl lg:max-w-none"
+          className="relative mx-auto w-full max-w-lg sm:max-w-2xl lg:max-w-none"
         >
           <div aria-hidden className="absolute inset-8 rounded-full border border-primary/20 opacity-70 blur-[1px]" />
           <svg aria-hidden className="absolute inset-0 h-full w-full overflow-visible opacity-80" viewBox="0 0 640 520">
@@ -237,23 +237,23 @@ export function HeroSection() {
             </defs>
           </svg>
 
-          <div className="glass-panel relative mx-auto min-h-[390px] rounded-[28px] p-4 sm:p-5">
-            <div className="mb-5 flex items-center justify-between">
-              <div className="flex gap-2">
-                <span className="size-3 rounded-full bg-[#ff625d]" />
-                <span className="size-3 rounded-full bg-[#ffbd44]" />
-                <span className="size-3 rounded-full bg-[#00ca4e]" />
+          <div className="glass-panel relative mx-auto rounded-[20px] p-3 sm:rounded-[28px] sm:p-5">
+            <div className="mb-3 flex items-center justify-between sm:mb-5">
+              <div className="flex gap-1.5 sm:gap-2">
+                <span className="size-2.5 rounded-full bg-[#ff625d] sm:size-3" />
+                <span className="size-2.5 rounded-full bg-[#ffbd44] sm:size-3" />
+                <span className="size-2.5 rounded-full bg-[#00ca4e] sm:size-3" />
               </div>
-              <div className="rounded-full bg-primary/12 px-3 py-1.5 font-mono text-xs text-primary-soft">
+              <div className="rounded-full bg-primary/12 px-2.5 py-1 font-mono text-[10px] text-primary-soft sm:px-3 sm:py-1.5 sm:text-xs">
                 POST /api/v1/notify
               </div>
             </div>
-            <div className="rounded-2xl border border-white/8 bg-black/40 p-5 shadow-inner">
-              <div className="mb-4 flex items-center gap-2 text-sm text-white/58">
-                <Terminal className="size-4 text-primary-soft" />
+            <div className="rounded-xl border border-white/8 bg-black/40 p-3 shadow-inner sm:rounded-2xl sm:p-5">
+              <div className="mb-3 flex items-center gap-2 text-xs text-white/58 sm:mb-4 sm:text-sm">
+                <Terminal className="size-3.5 text-primary-soft sm:size-4" />
                 naughyfication.request
               </div>
-              <pre className="overflow-x-auto pb-2 font-mono text-[12px] leading-6 text-white/76 sm:text-sm">
+              <pre className="overflow-x-auto pb-1 font-mono text-[10px] leading-5 text-white/76 sm:pb-2 sm:text-[12px] sm:leading-6 lg:text-sm">
                 {codeLines.map((line, index) => (
                   <motion.code
                     key={line}

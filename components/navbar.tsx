@@ -59,14 +59,25 @@ export function Navbar() {
           </Button>
         </div>
 
-        <button
-          type="button"
-          aria-label="Toggle navigation"
-          className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.04] md:hidden"
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <Button variant="secondary" size="sm" asChild>
+            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="Star on GitHub">
+              <Star className="size-3.5 fill-white" />
+              <span className="hidden xs:inline">Star</span>
+              <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-xs text-white/70">
+                {stars === null ? "…" : stars}
+              </span>
+            </a>
+          </Button>
+          <button
+            type="button"
+            aria-label="Toggle navigation"
+            className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.04]"
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </nav>
 
       <div
