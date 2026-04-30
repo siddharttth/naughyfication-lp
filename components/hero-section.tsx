@@ -96,35 +96,37 @@ const codeLines = [
 
 function CodePanel() {
   return (
-    <div className="glass-panel relative mx-auto rounded-[20px] p-3 sm:rounded-[28px] sm:p-5">
-      <div className="mb-3 flex items-center justify-between sm:mb-5">
-        <div className="flex gap-1.5 sm:gap-2">
-          <span className="size-2.5 rounded-full bg-[#ff625d] sm:size-3" />
-          <span className="size-2.5 rounded-full bg-[#ffbd44] sm:size-3" />
-          <span className="size-2.5 rounded-full bg-[#00ca4e] sm:size-3" />
+    <div className="w-full overflow-hidden rounded-[20px] sm:rounded-[28px]">
+      <div className="glass-panel relative p-3 sm:p-5">
+        <div className="mb-3 flex items-center justify-between sm:mb-5">
+          <div className="flex gap-1.5 sm:gap-2">
+            <span className="size-2.5 rounded-full bg-[#ff625d] sm:size-3" />
+            <span className="size-2.5 rounded-full bg-[#ffbd44] sm:size-3" />
+            <span className="size-2.5 rounded-full bg-[#00ca4e] sm:size-3" />
+          </div>
+          <div className="rounded-full bg-primary/12 px-2.5 py-1 font-mono text-[10px] text-primary-soft sm:px-3 sm:py-1.5 sm:text-xs">
+            POST /api/v1/notify
+          </div>
         </div>
-        <div className="rounded-full bg-primary/12 px-2.5 py-1 font-mono text-[10px] text-primary-soft sm:px-3 sm:py-1.5 sm:text-xs">
-          POST /api/v1/notify
+        <div className="overflow-hidden rounded-xl border border-white/8 bg-black/40 p-3 shadow-inner sm:rounded-2xl sm:p-5">
+          <div className="mb-3 flex items-center gap-2 text-xs text-white/58 sm:mb-4 sm:text-sm">
+            <Terminal className="size-3.5 text-primary-soft sm:size-4" />
+            naughyfication.request
+          </div>
+          <pre className="overflow-x-auto pb-1 font-mono text-[9px] leading-5 text-white/76 sm:pb-2 sm:text-[12px] sm:leading-6 lg:text-sm">
+            {codeLines.map((line, index) => (
+              <motion.code
+                key={line}
+                className="block"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 + index * 0.12, duration: 0.35 }}
+              >
+                {line}
+              </motion.code>
+            ))}
+          </pre>
         </div>
-      </div>
-      <div className="rounded-xl border border-white/8 bg-black/40 p-3 shadow-inner sm:rounded-2xl sm:p-5">
-        <div className="mb-3 flex items-center gap-2 text-xs text-white/58 sm:mb-4 sm:text-sm">
-          <Terminal className="size-3.5 text-primary-soft sm:size-4" />
-          naughyfication.request
-        </div>
-        <pre className="overflow-x-auto pb-1 font-mono text-[10px] leading-5 text-white/76 sm:pb-2 sm:text-[12px] sm:leading-6 lg:text-sm">
-          {codeLines.map((line, index) => (
-            <motion.code
-              key={line}
-              className="block"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 + index * 0.12, duration: 0.35 }}
-            >
-              {line}
-            </motion.code>
-          ))}
-        </pre>
       </div>
     </div>
   );
