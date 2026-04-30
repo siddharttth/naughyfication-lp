@@ -94,6 +94,42 @@ const codeLines = [
   "  }'"
 ];
 
+function CodePanel() {
+  return (
+    <div className="glass-panel relative mx-auto rounded-[20px] p-3 sm:rounded-[28px] sm:p-5">
+      <div className="mb-3 flex items-center justify-between sm:mb-5">
+        <div className="flex gap-1.5 sm:gap-2">
+          <span className="size-2.5 rounded-full bg-[#ff625d] sm:size-3" />
+          <span className="size-2.5 rounded-full bg-[#ffbd44] sm:size-3" />
+          <span className="size-2.5 rounded-full bg-[#00ca4e] sm:size-3" />
+        </div>
+        <div className="rounded-full bg-primary/12 px-2.5 py-1 font-mono text-[10px] text-primary-soft sm:px-3 sm:py-1.5 sm:text-xs">
+          POST /api/v1/notify
+        </div>
+      </div>
+      <div className="rounded-xl border border-white/8 bg-black/40 p-3 shadow-inner sm:rounded-2xl sm:p-5">
+        <div className="mb-3 flex items-center gap-2 text-xs text-white/58 sm:mb-4 sm:text-sm">
+          <Terminal className="size-3.5 text-primary-soft sm:size-4" />
+          naughyfication.request
+        </div>
+        <pre className="overflow-x-auto pb-1 font-mono text-[10px] leading-5 text-white/76 sm:pb-2 sm:text-[12px] sm:leading-6 lg:text-sm">
+          {codeLines.map((line, index) => (
+            <motion.code
+              key={line}
+              className="block"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 + index * 0.12, duration: 0.35 }}
+            >
+              {line}
+            </motion.code>
+          ))}
+        </pre>
+      </div>
+    </div>
+  );
+}
+
 function FleeIcon({ channel, index }: { channel: typeof channels[number]; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const rawX = useMotionValue(0);
@@ -157,45 +193,49 @@ export function HeroSection() {
       <div aria-hidden className="absolute right-0 top-0 h-[680px] w-[55vw] bg-[radial-gradient(circle_at_60%_28%,rgba(255,62,191,0.24),transparent_34%),radial-gradient(circle_at_70%_50%,rgba(127,70,255,0.14),transparent_38%)]" />
 
       <div className="container-shell grid items-center gap-10 lg:gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+
+        {/* ── Left: text content ── */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10 text-center sm:text-left"
+          className="relative z-10 text-center lg:text-left"
         >
-          <div className="mb-6 inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary-soft shadow-glow sm:mb-8 sm:px-4 sm:py-2 sm:text-sm">
+          <div className="mb-6 inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary-soft shadow-glow sm:px-4 sm:py-2 sm:text-sm">
             Open Source • Self Hosted • Developer First
           </div>
-          <h1 className="font-display text-4xl font-bold leading-[1.0] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-[2.6rem] font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
             Send Notifications.
             <br />
             Any Channel.
             <span className="pink-text-gradient animate-shimmer"> One API.</span>
           </h1>
-          <p className="mt-5 text-base leading-7 text-white/68 sm:mt-7 sm:text-xl">
+          <p className="mx-auto mt-5 max-w-sm text-base leading-7 text-white/68 sm:max-w-none sm:mt-7 sm:text-xl lg:mx-0">
             Production-grade notification infrastructure with retries, tracking, DLQs, webhooks,
             metrics, and reliability built in.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
-            <Button size="lg" className="w-full sm:w-auto" asChild>
-              <a href="#docs">
+
+          {/* Buttons — side by side on mobile too, full row */}
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:mt-9 sm:flex sm:flex-row">
+            <Button size="lg" asChild>
+              <a href="#docs" className="justify-center">
                 Get Started
-                <ArrowRight className="size-5" />
+                <ArrowRight className="size-4 shrink-0" />
               </a>
             </Button>
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto" asChild>
-              <a href="https://github.com/siddharttth/naughyfication" target="_blank" rel="noopener noreferrer">
-                <Github className="size-5" />
-                View GitHub
+            <Button variant="secondary" size="lg" asChild>
+              <a href="https://github.com/siddharttth/naughyfication" target="_blank" rel="noopener noreferrer" className="justify-center">
+                <Github className="size-4 shrink-0" />
+                GitHub
               </a>
             </Button>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-white/60 sm:justify-start sm:mt-10 sm:grid sm:grid-cols-3 sm:gap-4">
+          <div className="mt-7 flex flex-wrap justify-center gap-x-5 gap-y-2.5 text-sm text-white/60 lg:justify-start lg:mt-10 lg:grid lg:grid-cols-3 lg:gap-4">
             {["Easy to Self-Host", "No Vendor Lock-in", "Developer Friendly"].map((item) => (
               <div key={item} className="flex items-center gap-2">
-                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-white/[0.06] text-primary-soft ring-1 ring-white/10 sm:size-8">
-                  <Zap className="size-3.5 sm:size-4" />
+                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-white/[0.06] text-primary-soft ring-1 ring-white/10">
+                  <Zap className="size-3.5" />
                 </span>
                 {item}
               </div>
@@ -203,32 +243,17 @@ export function HeroSection() {
           </div>
         </motion.div>
 
+        {/* ── Right: code panel (desktop + tablet) ── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-lg sm:max-w-2xl lg:max-w-none"
+          className="relative mx-auto hidden w-full sm:block lg:max-w-none"
         >
           <div aria-hidden className="absolute inset-8 rounded-full border border-primary/20 opacity-70 blur-[1px]" />
           <svg aria-hidden className="absolute inset-0 h-full w-full overflow-visible opacity-80" viewBox="0 0 640 520">
-            <motion.path
-              d="M82 138 C186 70 446 78 552 158"
-              stroke="url(#lineGradient)"
-              strokeWidth="1.5"
-              strokeDasharray="6 10"
-              fill="none"
-              animate={{ pathLength: [0.25, 1, 0.25] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.path
-              d="M86 394 C202 470 440 462 560 346"
-              stroke="url(#lineGradient)"
-              strokeWidth="1.5"
-              strokeDasharray="6 10"
-              fill="none"
-              animate={{ pathLength: [1, 0.25, 1] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            />
+            <motion.path d="M82 138 C186 70 446 78 552 158" stroke="url(#lineGradient)" strokeWidth="1.5" strokeDasharray="6 10" fill="none" animate={{ pathLength: [0.25, 1, 0.25] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} />
+            <motion.path d="M86 394 C202 470 440 462 560 346" stroke="url(#lineGradient)" strokeWidth="1.5" strokeDasharray="6 10" fill="none" animate={{ pathLength: [1, 0.25, 1] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }} />
             <defs>
               <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="1">
                 <stop stopColor="#ff3ebf" />
@@ -237,42 +262,23 @@ export function HeroSection() {
             </defs>
           </svg>
 
-          <div className="glass-panel relative mx-auto rounded-[20px] p-3 sm:rounded-[28px] sm:p-5">
-            <div className="mb-3 flex items-center justify-between sm:mb-5">
-              <div className="flex gap-1.5 sm:gap-2">
-                <span className="size-2.5 rounded-full bg-[#ff625d] sm:size-3" />
-                <span className="size-2.5 rounded-full bg-[#ffbd44] sm:size-3" />
-                <span className="size-2.5 rounded-full bg-[#00ca4e] sm:size-3" />
-              </div>
-              <div className="rounded-full bg-primary/12 px-2.5 py-1 font-mono text-[10px] text-primary-soft sm:px-3 sm:py-1.5 sm:text-xs">
-                POST /api/v1/notify
-              </div>
-            </div>
-            <div className="rounded-xl border border-white/8 bg-black/40 p-3 shadow-inner sm:rounded-2xl sm:p-5">
-              <div className="mb-3 flex items-center gap-2 text-xs text-white/58 sm:mb-4 sm:text-sm">
-                <Terminal className="size-3.5 text-primary-soft sm:size-4" />
-                naughyfication.request
-              </div>
-              <pre className="overflow-x-auto pb-1 font-mono text-[10px] leading-5 text-white/76 sm:pb-2 sm:text-[12px] sm:leading-6 lg:text-sm">
-                {codeLines.map((line, index) => (
-                  <motion.code
-                    key={line}
-                    className="block"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6 + index * 0.12, duration: 0.35 }}
-                  >
-                    {line}
-                  </motion.code>
-                ))}
-              </pre>
-            </div>
-          </div>
+          <CodePanel />
 
           {channels.map((channel, index) => (
             <FleeIcon key={channel.label} channel={channel} index={index} />
           ))}
         </motion.div>
+
+        {/* ── Mobile only: code panel without floating icons ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="sm:hidden w-full"
+        >
+          <CodePanel />
+        </motion.div>
+
       </div>
     </section>
   );
