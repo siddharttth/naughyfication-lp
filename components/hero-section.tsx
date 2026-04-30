@@ -186,7 +186,8 @@ function FleeIcon({ channel, index }: { channel: typeof channels[number]; index:
 
 export function HeroSection() {
   return (
-    <section className="relative isolate overflow-x-hidden pb-16 pt-28 sm:pt-40 lg:min-h-screen lg:pb-24">
+    <section className="relative isolate pb-16 pt-24 sm:pt-40 lg:min-h-screen lg:pb-24">
+      {/* decorative — clipped by main's overflow-x-hidden */}
       <div aria-hidden className="surface-grid absolute inset-0 opacity-50" />
       <div aria-hidden className="orb -right-28 top-20 size-[460px] bg-primary/25" />
       <div aria-hidden className="orb left-10 top-32 size-[260px] bg-fuchsia-500/16" />
@@ -199,29 +200,29 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10 w-full min-w-0 text-center lg:text-left"
+          className="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left"
         >
           <div className="mb-5 inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-[11px] font-semibold text-primary-soft shadow-glow sm:px-4 sm:py-2 sm:text-sm">
             Open Source • Self Hosted • Developer First
           </div>
+
           <h1
             className="font-display font-bold text-white"
-            style={{ fontSize: "clamp(1.65rem, 7.5vw, 4.5rem)", lineHeight: 1.08 }}
+            style={{ fontSize: "clamp(1.6rem, 7vw, 4.5rem)", lineHeight: 1.08 }}
           >
             Send Notifications.
             <br />
             Any Channel.
             <span className="pink-text-gradient animate-shimmer"> One API.</span>
           </h1>
-          <p className="mx-auto mt-4 text-sm leading-6 text-white/68 sm:mt-7 sm:text-xl lg:mx-0"
-            style={{ maxWidth: "min(38ch, 100%)" }}
-          >
+
+          <p className="mt-4 max-w-[30ch] text-sm leading-6 text-white/68 sm:mt-6 sm:max-w-prose sm:text-lg">
             Production-grade notification infrastructure with retries, tracking, DLQs, webhooks,
             metrics, and reliability built in.
           </p>
 
-          {/* Buttons */}
-          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
+          {/* Buttons — never wider than text column */}
+          <div className="mt-6 flex w-full max-w-xs flex-col gap-3 sm:mt-8 sm:max-w-none sm:flex-row">
             <Button size="lg" className="w-full sm:w-auto" asChild>
               <a href="#docs">
                 Get Started
@@ -236,7 +237,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="mt-7 flex flex-wrap justify-center gap-x-5 gap-y-2.5 text-sm text-white/60 lg:justify-start lg:mt-10 lg:grid lg:grid-cols-3 lg:gap-4">
+          <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2.5 text-sm text-white/60 sm:mt-8 lg:justify-start lg:grid lg:grid-cols-3 lg:gap-4">
             {["Easy to Self-Host", "No Vendor Lock-in", "Developer Friendly"].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <span className="grid size-7 shrink-0 place-items-center rounded-full bg-white/[0.06] text-primary-soft ring-1 ring-white/10">

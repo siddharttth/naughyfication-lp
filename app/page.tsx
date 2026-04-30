@@ -12,7 +12,7 @@ import { Navbar } from "@/components/navbar";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-screen overflow-x-hidden">
       <MouseGlow />
       <Navbar />
       <HeroSection />
