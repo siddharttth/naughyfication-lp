@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://naughyfication.dev"),
   title: {
-    default: "Naughyfication | Send Notifications That Never Fail",
+    default: "Send Naughtyfication",
     template: "%s | Naughyfication"
   },
   description:
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Naughyfication" }],
   creator: "Naughyfication",
   openGraph: {
-    title: "Naughyfication | Send Notifications That Never Fail",
+    title: "Send Naughtyfication",
     description:
       "One API for resilient multi-channel notifications across email, SMS, Slack, Telegram, WhatsApp, and more.",
     url: "https://naughyfication.dev",
@@ -57,15 +57,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naughyfication | Send Notifications That Never Fail",
+    title: "Send Naughtyfication",
     description:
       "Open-source notification infrastructure with retries, queues, DLQs, webhooks, and metrics built in.",
     images: ["/og.svg"]
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/apple-touch-icon.svg"
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png"
   }
 };
 

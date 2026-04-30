@@ -1,4 +1,5 @@
-import { Bell, BookOpen, Code2, Github } from "lucide-react";
+import { BookOpen, Code2, Github } from "lucide-react";
+import Image from "next/image";
 
 const links = [
   { label: "GitHub", href: "https://github.com/siddharttth/naughyfication", icon: Github },
@@ -11,10 +12,8 @@ export function Footer() {
     <footer className="border-t border-white/8 py-10">
       <div className="container-shell flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
-          <a href="#" className="flex items-center gap-3 font-display text-lg font-bold text-white">
-            <span className="grid size-9 place-items-center rounded-xl bg-primary/14 text-primary-soft ring-1 ring-primary/25">
-              <Bell className="size-5" />
-            </span>
+          <a href="#" className="flex items-center gap-2.5 font-display text-lg font-bold text-white">
+            <Image src="/logo.png" alt="Naughyfication" width={36} height={36} className="size-9 drop-shadow-[0_0_8px_rgba(255,62,191,0.6)]" />
             Naughyfication
           </a>
           <p className="mt-4 text-sm text-white/52">Built for developers who care about reliability.</p>

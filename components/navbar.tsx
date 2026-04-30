@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bell, Github, Menu, Star, X } from "lucide-react";
+import { Github, Menu, Star, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -28,10 +29,9 @@ export function Navbar() {
       className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-background/55 backdrop-blur-2xl"
     >
       <nav className="container-shell flex h-20 items-center justify-between">
-        <a href="#" className="group flex items-center gap-3 font-display text-lg font-bold text-white">
-          <span className="relative grid size-9 place-items-center rounded-xl bg-primary/15 text-primary-soft ring-1 ring-primary/30">
-            <Bell className="size-5 fill-primary/20" />
-            <span className="absolute inset-0 rounded-xl bg-primary/35 blur-xl transition-opacity group-hover:opacity-80" />
+        <a href="#" className="group flex items-center gap-2.5 font-display text-lg font-bold text-white">
+          <span className="relative grid size-9 place-items-center">
+            <Image src="/logo.png" alt="Naughyfication" width={36} height={36} className="size-9 drop-shadow-[0_0_8px_rgba(255,62,191,0.7)]" />
           </span>
           Naughyfication
         </a>
