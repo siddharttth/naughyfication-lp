@@ -205,15 +205,17 @@ export function HeroSection() {
             Open Source • Self Hosted • Developer First
           </div>
           <h1
-            className="font-display font-bold text-white sm:text-6xl lg:text-7xl"
-            style={{ fontSize: "clamp(1.9rem, 9vw, 3.75rem)", lineHeight: 1.08 }}
+            className="font-display font-bold text-white"
+            style={{ fontSize: "clamp(1.65rem, 7.5vw, 4.5rem)", lineHeight: 1.08 }}
           >
             Send Notifications.
             <br />
             Any Channel.
             <span className="pink-text-gradient animate-shimmer"> One API.</span>
           </h1>
-          <p className="mx-auto mt-5 w-full max-w-[34ch] text-[0.95rem] leading-7 text-white/68 sm:max-w-none sm:mt-7 sm:text-xl lg:mx-0">
+          <p className="mx-auto mt-4 text-sm leading-6 text-white/68 sm:mt-7 sm:text-xl lg:mx-0"
+            style={{ maxWidth: "min(38ch, 100%)" }}
+          >
             Production-grade notification infrastructure with retries, tracking, DLQs, webhooks,
             metrics, and reliability built in.
           </p>
